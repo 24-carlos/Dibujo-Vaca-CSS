@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo de una Vaca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/006/763/956/non_2x/empty-outdoor-farm-background-free-vector.jpg);
+            margin-top: 400px;
+            margin-left: -300px;
+        }
+
+        .vaca {
+            position: relative;
+            background-color: rgba(0, 255, 255, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column ;
+            margin-top: 200px;
+        }
+
+        .cabeza {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            z-index: 600;
+            border: 3px solid;            
+        }
+
+        .ojos {
+            text-align: center;
+            margin-top: 60px;   
+        }
+
+        .ojos span {
+            display: inline-block;
+            width: 30px;
+            height: 40px;
+            background: black;
+            border-radius: 50%;
+            margin: 0 15px;
+        }
+
+        .hocico {
+            width: 150px;
+            height: 90px;
+            background: rgb(235, 155, 155);
+            border-radius: 50%;
+            margin-top: -90px;
+            z-index: 800;
+            border: 3px solid;
+        }
+
+        .fosas_nasales {
+            align-items: center;
+            margin: 10px;  
+        }
+
+        .fosas_nasales span {
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            background: rgb(161, 66, 66);
+            border-radius: 50%;
+            margin: 10px 15px;
+        }
+
+        .oreja {
+            position: absolute;
+            top: -90px;
+            right: 160px;
+            background: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 0% 100% 11% 58% ;
+            border: 3px solid;
+        }
+
+        .oreja-r {
+            left: initial;
+            left: 160px;
+            border-radius: 64% 0% 61% 17%;
+
+        }
+
+        .cuernos {
+            position: absolute;
+            top: -30px;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            box-shadow: -25px 15px 0 5px #0d0d0d;
+            border-radius:50%;
+            z-index: 100;
+        }
+
+        .cuernos-r {
+            left: initial;
+            box-shadow: 25px 15px 0 5px #0d0d0d;
+        }
+
+        .cuerpo {
+            position: absolute;
+            top: 120px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50% 50% 30% 30%;
+            background: white;
+            border: 3px solid;
+            z-index: 500;
+        }
+
+        .pata_delantera {
+            position: absolute;
+            top: 142px;
+            left: -2px;
+            width: 80px;
+            height: 70px;
+            background: white;
+            border-radius: 0% 0% 26% 26% / 0% 0% 100% 100%;
+            border: 3px solid;
+            border-top: transparent;
+            z-index: -1;
+        }
+
+        .pata_delantera-r {
+            left: initial;
+            right: -2px;
+            z-index: -1;
+        }
+
+        .pezuña_delantera {
+            text-align: center;
+            margin-top: 180px;   
+        }
+
+        .pezuña_delantera span {
+            display: inline-block;
+            width: 58px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            margin: 15px -92px;
+        }
+
+        .pata_trasera {
+            position: absolute;
+            top: 142px;
+            left: -40px;
+            width: 70px;
+            height: 55px;
+            background: white;
+            border-radius: 100% 0% 0% 0% / 100% 17% 100% 0%;
+            border: 3px solid;
+            z-index: -500;
+        }
+
+        .pata_trasera-r {
+            left: initial;
+            border-radius: 0% 83% 0% 0% / 100% 100% 0% 0%;
+            right: -40px;
+            z-index: -500;
+        }
+        
+        .pezuña_trasera {
+            text-align: center;
+            margin-top: -45px ;
+        }
+
+        .pezuña_trasera span {
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            background: black;
+            border-radius: 50%;
+            margin: 0 -140px;
+        }    
+
+        .manchas {
+            position: absolute;
+            height: 20px;
+            width: 30px;
+            background: black;
+            border-radius: 100px 28px 73px 2px;
+        } 
+
+        .lengua {
+            position: absolute;
+            top: 30px;
+            right: 80px;
+            width: 40px;
+            height: 45px;
+            background: rgb(216, 55, 55);
+            border-radius: 74% 26% 47% 53% / 12% 29% 71% 88%;
+            border: solid 2px;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="vaca">
+
+            <div class="cabeza" >
+                <div class="ojos">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <div class="hocico">
+                <div class="fosas_nasales">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="cuernos"></div>
+            <div class="cuernos cuernos-r"></div>
+
+            <div class="cuerpo">
+
+                <div class="oreja"></div>
+                <div class="oreja oreja-r"></div>
+
+                <div class="pata_delantera" ></div>
+                <div class="pata_delantera pata_delantera-r"></div>
+            <div class="pezuña_delantera">
+                <span></span>
+                <span></span>
+            </div>
+                <div class="pata_trasera" ></div>
+                <div class="pata_trasera pata_trasera-r" ></div>
+            <div class="pezuña_trasera">
+                <span></span>
+                <span></span>
+            </div>
+                <div class="lengua"></div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
